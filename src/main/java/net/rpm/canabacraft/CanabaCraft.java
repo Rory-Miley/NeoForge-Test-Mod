@@ -13,6 +13,7 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import net.rpm.canabacraft.item.ModCreativeModeTabs;
 import net.rpm.canabacraft.item.ModItems;
 import org.slf4j.Logger;
 
@@ -33,12 +34,14 @@ public class CanabaCraft {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
+        //adding the creative tab for the mod
+        ModCreativeModeTabs.register(modEventBus);
+
         //Calling my custom made item event calling function from moditem class
         ModItems.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
-
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
@@ -53,7 +56,6 @@ public class CanabaCraft {
         //add items to creative mode food and drink tab
         if(event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS){
             event.accept(ModItems.JOINT);
-            event.accept(ModItems.ROCHE);
         }
     }
 

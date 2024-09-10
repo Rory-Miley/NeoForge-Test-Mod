@@ -18,6 +18,10 @@ public class ModItems {
     public static final DeferredItem<Item> ROCHE = ITEMS.register("roche",
             () -> new Item(new Item.Properties()));
 
+    public static final DeferredItem<Item> SKIN = ITEMS.register("skin",
+            () -> new Item(new Item.Properties()));
+
+
     //This is the function that registers the list of items created earlier
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

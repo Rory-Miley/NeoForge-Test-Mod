@@ -1,4 +1,7 @@
 {
   "item.canabacraft.joint" : "Joint",
-  "item.canabacraft.roche" : "Roche"
+  "item.canabacraft.roche" : "Roche",
+  "item.canabacraft.skin" : "Skin",
+
+  "creativetab.canabacraft.canabacraft_items" : "CanabaCraft"
 }
