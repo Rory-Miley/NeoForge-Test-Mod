@@ -16,12 +16,13 @@ public class ModCreativeModeTabs {
 
 
     public static final Supplier<CreativeModeTab> CANABACRAFT_ITEMS_TAB = CREATIVE_MODE_TAB.register("canabacraft_items_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.JOINT.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.BUD.get()))
                     .title(Component.translatable("creativetab.canabacraft.canabacraft_items"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.JOINT);
                         output.accept(ModItems.ROCHE);
                         output.accept(ModItems.SKIN);
+                        output.accept(ModItems.BUD);
                     }).build());
 
 

@@ -57,6 +57,9 @@ public class CanabaCraft {
         if(event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS){
             event.accept(ModItems.JOINT);
         }
+        if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS){
+            event.accept(ModItems.BUD);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
