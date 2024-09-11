@@ -1,18 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
-  "key": {
-    "#": {
-      "item": "minecraft:paper"
-    }
-  },
   "pattern": [
     "#  ",
     " # ",
     "  #"
   ],
+  "key": {
+    "#": {
+      "item": "minecraft:paper"
+    }
+  },
   "result": {
-    "count": 2,
-    "item": "canabacraft:skin"
+    "item": "canabacraft:skin",
+    "count": 1
   }
 }

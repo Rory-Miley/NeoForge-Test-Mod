@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "canabacraft:block/kilo_block_top",
+    "side": "canabacraft:block/kilo_block_side"
+  }
+}

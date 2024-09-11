@@ -4,5 +4,7 @@
   "item.canabacraft.skin" : "Skin",
   "item.canabacraft.bud" : "Bud",
 
+  "block.canabacraft.kilo_block": "Kilo of Bud",
+
   "creativetab.canabacraft.canabacraft_items" : "CanabaCraft"
 }

@@ -1,12 +1,14 @@
 package net.rpm.canabacraft.item;
 
 import net.minecraft.core.registries.Registries;
+
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.rpm.canabacraft.CanabaCraft;
+import net.rpm.canabacraft.block.ModBlocks;
 
 import java.util.function.Supplier;
 
@@ -23,6 +25,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.ROCHE);
                         output.accept(ModItems.SKIN);
                         output.accept(ModItems.BUD);
+                        output.accept(ModBlocks.KILO_BLOCK);
                     }).build());
 
 

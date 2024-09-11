@@ -13,6 +13,7 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import net.rpm.canabacraft.block.ModBlocks;
 import net.rpm.canabacraft.item.ModCreativeModeTabs;
 import net.rpm.canabacraft.item.ModItems;
 import org.slf4j.Logger;
@@ -39,6 +40,7 @@ public class CanabaCraft {
 
         //Calling my custom made item event calling function from moditem class
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -54,11 +56,14 @@ public class CanabaCraft {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
 
         //add items to creative mode food and drink tab
-        if(event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS){
+        if(event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
             event.accept(ModItems.JOINT);
         }
-        if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS){
+        if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
             event.accept(ModItems.BUD);
+        }
+        if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
+            event.accept(ModBlocks.KILO_BLOCK);
         }
     }
 
